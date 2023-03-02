@@ -1,16 +1,11 @@
 import { Check, Circle, Trash } from "phosphor-react";
+import { TaskType } from "../../libs/types";
 import styles from "./styles.module.css";
-
-type TaskType = {
-	id: number;
-	title: string;
-	completed: boolean;
-};
 
 interface TaskProps {
 	task: TaskType;
-	onCheckTask: (taskId: number) => void;
-	onDeleteTask: (taskId: number) => void;
+	onCheckTask: (taskId: string) => void;
+	onDeleteTask: (taskId: string) => void;
 }
 
 export function Task({ task, onCheckTask, onDeleteTask }: TaskProps) {

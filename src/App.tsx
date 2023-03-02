@@ -29,7 +29,6 @@ function App() {
 		<>
 			<Header />
 			<div className={styles.container}>
-				<NewTask />
 				<TaskList />
 			</div>
 		</>
