@@ -1,0 +1,153 @@
+.container {
+	width: 39.9rem;
+	margin-top: 8rem;
+}
+
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapperLeft {
+	display: flex;
+	width: 50%;
+	justify-content: flex-start;
+	gap: 8px;
+}
+
+.wrapperLeft > aside {
+	font-weight: bold;
+	font-size: 0.875rem;
+	color: var(--blue-500);
+}
+
+.wrapperRight {
+	display: flex;
+	width: 50%;
+	justify-content: flex-end;
+	gap: 8px;
+}
+
+.wrapperRight > aside {
+	font-weight: bold;
+	font-size: 0.875rem;
+	color: var(--purple-500);
+}
+
+.rounded {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: var(--gray-400);
+	color: var(--gray-200);
+	font-size: 0.75rem;
+	font-weight: bold;
+
+	border-radius: 999px;
+}
+
+.numberCreatedTasks {
+	padding: 0.125 0.5rem;
+	width: 8%;
+}
+
+.numberConcludedTasks {
+	width: 20%;
+	padding: 0.125 0.5rem;
+}
+
+.task {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: var(--gray-400);
+	color: var(--gray-100);
+
+	font-size: 0.875rem;
+	padding: 1rem;
+
+	border-radius: 8px;
+}
+
+.task:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.task:first-child {
+	margin-top: 2rem;
+}
+
+.task > div {
+	display: flex;
+	align-items: flex-start;
+}
+
+.task span {
+	color: var(--blue-500);
+}
+
+.task p {
+	font-size: 0.875rem;
+	padding-right: 0.5rem;
+}
+
+.task .textCompleted {
+	text-decoration: line-through;
+	color: var(--gray-300);
+}
+
+.buttonCheck {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.buttonCheck:hover {
+	/* opacity: 0.5; */
+}
+
+.buttonCheck:focus {
+	box-shadow: none;
+}
+
+.deleteButton {
+	border: 0;
+	background: transparent;
+	color: var(--gray-300);
+
+	cursor: pointer;
+
+	line-height: 0;
+}
+
+.deleteButton:hover {
+	color: var(--red-600);
+}
+
+.checked {
+	background-color: var(--purple-500);
+	border: 2px solid var(--purple-500);
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: 0.1s background-color;
+}
+
+.unchecked {
+	background-color: transparent;
+	border: 2px solid var(--blue-500);
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+
+	transition: 0.1s background-color;
+}
+
+.unchecked:hover {
+	background-color: var(--blue-700);
+}
