@@ -67,8 +67,10 @@
 }
 
 .checked {
-	background-color: var(--purple-500);
-	border: 2px solid var(--purple-500);
+	background-color: var(--purple-700);
+	border: 1px solid var(--purple-700);
+
+	/* border: 2px solid var(--purple-700); */
 	width: 1.2rem;
 	height: 1.2rem;
 	border-radius: 50%;
@@ -79,16 +81,44 @@
 	transition: 0.1s background-color;
 }
 
+/* .checked:hover {
+	background-color: var(--purple-500);
+	background: red;
+} */
+
 .unchecked {
-	background-color: transparent;
-	border: 2px solid var(--blue-500);
+	border-radius: 50%;
+	/* background-color: transparent; */
+	/* border: 2px solid var(--blue-500); */
 	width: 1.2rem;
 	height: 1.2rem;
-	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	transition: 0.1s background-color;
 }
 
 .unchecked:hover {
-	background-color: var(--blue-700);
+	background-color: var(--blue-500);
+	border-radius: 50%;
+	opacity: 0.3;
+}
+
+.borderCircleUnchecked {
+	border: 2px solid var(--blue-500);
+	border-radius: 50%;
+}
+
+.borderCircleChecked {
+	border: 2px solid var(--purple-700);
+	border-radius: 50%;
+}
+
+.borderCircleChecked:hover {
+	/* background-color: var(--red-500); */
+	/* background-color: var(--red-500); */
+	/* border: 2px solid var(--purple-500); */
+	border: 2px solid var(--purple-500);
 }

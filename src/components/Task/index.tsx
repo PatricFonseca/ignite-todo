@@ -34,20 +34,34 @@ export function Task({ task, onCheckTask, onDeleteTask }: TaskProps) {
 							justifyContent: "center",
 						}}
 					>
-						<Circle
+						{/* <Circle
 							size={24}
 							fill={task.completed ? "var(--purple-500)" : ""}
 							weight={task.completed ? "fill" : "regular"}
-						/>
-
-						{task.completed && (
-							<Check
-								color="#fff"
-								fill="#fff"
-								style={{ position: "absolute" }}
-								weight="bold"
-							/>
-						)}
+							className={styles.circle}
+						/> */}
+						<div
+							className={`${
+								task.completed
+									? styles.borderCircleChecked
+									: styles.borderCircleUnchecked
+							}`}
+						>
+							<span
+								className={`${
+									task.completed ? styles.checked : styles.unchecked
+								}`}
+							>
+								{task.completed && (
+									<Check
+										color="#fff"
+										fill="#fff"
+										weight="bold"
+										className="check"
+									/>
+								)}
+							</span>
+						</div>
 					</span>
 				</button>
 				<p className={`${task.completed && styles.textCompleted}`}>
