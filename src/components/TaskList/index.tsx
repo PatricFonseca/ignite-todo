@@ -1,3 +1,4 @@
+import { ClipboardText } from "phosphor-react";
 import { useState } from "react";
 import { TaskType } from "../../libs/types";
 import { NewTask } from "../NewTask";
@@ -66,6 +67,15 @@ export function TaskList() {
 						</span>
 					</div>
 				</header>
+				{taskList.length === 0 && (
+					<>
+						<div className={styles.notasks}>
+							<ClipboardText size={56} color="var(--gray-400)" />
+							<h3>Você ainda não tem tarefas cadastradas</h3>
+							<p>Crie tarefas e organize seus itens a fazer</p>
+						</div>
+					</>
+				)}
 				<ul className={styles.taskList}>
 					{taskList.map((task) => {
 						return (

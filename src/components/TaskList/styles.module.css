@@ -1,6 +1,6 @@
 .container {
 	width: 39.9rem;
-	margin-top: 8rem;
+	margin-top: 6rem;
 }
 
 .headerContainer {
@@ -18,6 +18,7 @@
 .wrapperLeft > aside {
 	font-weight: bold;
 	font-size: 0.875rem;
+	line-height: 140%;
 	color: var(--blue-500);
 }
 
@@ -31,6 +32,7 @@
 .wrapperRight > aside {
 	font-weight: bold;
 	font-size: 0.875rem;
+	line-height: 140%;
 	color: var(--purple-500);
 }
 
@@ -55,4 +57,29 @@
 .numberConcludedTasks {
 	width: 20%;
 	padding: 0.125 0.5rem;
+}
+
+.notasks {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid var(--gray-400);
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	padding: 4rem;
+	margin-top: 2rem;
+}
+
+.notasks h3 {
+	font-weight: 700;
+	font-size: 1rem;
+	margin-top: 1rem;
+	color: var(--gray-300);
+}
+
+.notasks p {
+	font-weight: 400;
+	font-size: 1rem;
+	color: var(--gray-300);
 }

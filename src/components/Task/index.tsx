@@ -18,7 +18,12 @@ export function Task({ task, onCheckTask, onDeleteTask }: TaskProps) {
 	}
 
 	return (
-		<li key={task.id} className={styles.task}>
+		<li
+			key={task.id}
+			className={`${styles.task} ${
+				task.completed ? "" : styles.taskUncompleted
+			}`}
+		>
 			<div
 				style={{
 					display: "flex",
@@ -34,12 +39,6 @@ export function Task({ task, onCheckTask, onDeleteTask }: TaskProps) {
 							justifyContent: "center",
 						}}
 					>
-						{/* <Circle
-							size={24}
-							fill={task.completed ? "var(--purple-500)" : ""}
-							weight={task.completed ? "fill" : "regular"}
-							className={styles.circle}
-						/> */}
 						<div
 							className={`${
 								task.completed
